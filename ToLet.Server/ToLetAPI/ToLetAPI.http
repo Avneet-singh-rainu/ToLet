@@ -1,0 +1,6 @@
+@ToLetAPI_HostAddress = http://localhost:5031
+
+GET {{ToLetAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

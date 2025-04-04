@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "RGVeIhRqXq7z5SISPgGFeg+TfJmSr7Djvwvi1wyh+WE=",
+  "Source": "ToLetAPI",
+  "BasePath": "_content/ToLetAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
