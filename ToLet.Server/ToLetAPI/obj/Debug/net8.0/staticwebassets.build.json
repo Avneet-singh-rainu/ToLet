@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "RGVeIhRqXq7z5SISPgGFeg+TfJmSr7Djvwvi1wyh+WE=",
-  "Source": "ToLetAPI",
-  "BasePath": "_content/ToLetAPI",
+  "Hash": "LChBKFidEQP+YfTUFmgFHg0c7a0ZPOQUNslH6h8+iCs=",
+  "Source": "ToLet.API",
+  "BasePath": "_content/ToLet.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

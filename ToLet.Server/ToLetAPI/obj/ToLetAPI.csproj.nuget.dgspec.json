@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\dotNet projects\\ToLet-Server\\ToLetAPI\\ToLetAPI.csproj": {}
+    "E:\\dotNet projects\\To-Let\\ToLet.Server\\ToLetAPI\\ToLetAPI.csproj": {}
   },
   "projects": {
-    "E:\\dotNet projects\\ToLet-Server\\ToLetAPI\\ToLetAPI.csproj": {
+    "E:\\dotNet projects\\To-Let\\ToLet.Server\\ToLetAPI\\ToLetAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\dotNet projects\\ToLet-Server\\ToLetAPI\\ToLetAPI.csproj",
+        "projectUniqueName": "E:\\dotNet projects\\To-Let\\ToLet.Server\\ToLetAPI\\ToLetAPI.csproj",
         "projectName": "ToLetAPI",
-        "projectPath": "E:\\dotNet projects\\ToLet-Server\\ToLetAPI\\ToLetAPI.csproj",
+        "projectPath": "E:\\dotNet projects\\To-Let\\ToLet.Server\\ToLetAPI\\ToLetAPI.csproj",
         "packagesPath": "C:\\Users\\TUF\\.nuget\\packages\\",
-        "outputPath": "E:\\dotNet projects\\ToLet-Server\\ToLetAPI\\obj\\",
+        "outputPath": "E:\\dotNet projects\\To-Let\\ToLet.Server\\ToLetAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
