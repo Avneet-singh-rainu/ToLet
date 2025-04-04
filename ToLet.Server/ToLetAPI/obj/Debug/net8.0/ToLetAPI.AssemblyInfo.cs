@@ -15,7 +15,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ToLetAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f06531dcf535ed674d07772d2099cbeeec6e5970")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68772b676388cf1684d0fe898feecf07f20f0ec1")]
+>>>>>>> origin/master
 [assembly: System.Reflection.AssemblyProductAttribute("ToLetAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ToLetAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

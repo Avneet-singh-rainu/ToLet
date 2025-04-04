@@ -1,1 +1,16 @@
+<<<<<<< HEAD
 .vs/
+=======
+# Ignore Visual Studio temporary files
+.vs/
+*.user
+*.suo
+*.vspx
+*.vsidx
+*.dbmdl
+*.bak
+*.log
+*.pdb
+bin/
+obj/
+>>>>>>> origin/master
