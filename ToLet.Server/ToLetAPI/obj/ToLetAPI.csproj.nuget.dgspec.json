@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\dotNet projects\\ToLet-Server\\ToLetAPI\\ToLetAPI.csproj": {}
+    "D:\\ToLet\\ToLet.Server\\ToLetAPI\\ToLetAPI.csproj": {}
   },
   "projects": {
-    "E:\\dotNet projects\\ToLet-Server\\ToLetAPI\\ToLetAPI.csproj": {
+    "D:\\ToLet\\ToLet.Server\\ToLetAPI\\ToLetAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\dotNet projects\\ToLet-Server\\ToLetAPI\\ToLetAPI.csproj",
+        "projectUniqueName": "D:\\ToLet\\ToLet.Server\\ToLetAPI\\ToLetAPI.csproj",
         "projectName": "ToLetAPI",
-        "projectPath": "E:\\dotNet projects\\ToLet-Server\\ToLetAPI\\ToLetAPI.csproj",
-        "packagesPath": "C:\\Users\\TUF\\.nuget\\packages\\",
-        "outputPath": "E:\\dotNet projects\\ToLet-Server\\ToLetAPI\\obj\\",
+        "projectPath": "D:\\ToLet\\ToLet.Server\\ToLetAPI\\ToLetAPI.csproj",
+        "packagesPath": "C:\\Users\\suvrt\\.nuget\\packages\\",
+        "outputPath": "D:\\ToLet\\ToLet.Server\\ToLetAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\TUF\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\suvrt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -78,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
