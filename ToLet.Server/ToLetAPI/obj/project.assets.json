@@ -5298,23 +5298,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TUF\\.nuget\\packages\\": {},
+    "C:\\Users\\Abhishek\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\dotNet projects\\To-Let\\ToLet.Server\\ToLetAPI\\ToLet.API.csproj",
+      "projectUniqueName": "C:\\Users\\Abhishek\\OneDrive\\Desktop\\ToLet\\ToLet.Server\\ToLetAPI\\ToLet.API.csproj",
       "projectName": "ToLet.API",
-      "projectPath": "E:\\dotNet projects\\To-Let\\ToLet.Server\\ToLetAPI\\ToLet.API.csproj",
-      "packagesPath": "C:\\Users\\TUF\\.nuget\\packages\\",
-      "outputPath": "E:\\dotNet projects\\To-Let\\ToLet.Server\\ToLetAPI\\obj\\",
+      "projectPath": "C:\\Users\\Abhishek\\OneDrive\\Desktop\\ToLet\\ToLet.Server\\ToLetAPI\\ToLet.API.csproj",
+      "packagesPath": "C:\\Users\\Abhishek\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Abhishek\\OneDrive\\Desktop\\ToLet\\ToLet.Server\\ToLetAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\TUF\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Abhishek\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5329,11 +5329,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\dotNet projects\\To-Let\\ToLet.Server\\ToLet.Data\\ToLet.Data.csproj": {
-              "projectPath": "E:\\dotNet projects\\To-Let\\ToLet.Server\\ToLet.Data\\ToLet.Data.csproj"
+            "C:\\Users\\Abhishek\\OneDrive\\Desktop\\ToLet\\ToLet.Server\\ToLet.Data\\ToLet.Data.csproj": {
+              "projectPath": "C:\\Users\\Abhishek\\OneDrive\\Desktop\\ToLet\\ToLet.Server\\ToLet.Data\\ToLet.Data.csproj"
             },
-            "E:\\dotNet projects\\To-Let\\ToLet.Server\\ToLet.Repository\\ToLet.Repository.csproj": {
-              "projectPath": "E:\\dotNet projects\\To-Let\\ToLet.Server\\ToLet.Repository\\ToLet.Repository.csproj"
+            "C:\\Users\\Abhishek\\OneDrive\\Desktop\\ToLet\\ToLet.Server\\ToLet.Repository\\ToLet.Repository.csproj": {
+              "projectPath": "C:\\Users\\Abhishek\\OneDrive\\Desktop\\ToLet\\ToLet.Server\\ToLet.Repository\\ToLet.Repository.csproj"
             }
           }
         }
@@ -5402,7 +5402,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
