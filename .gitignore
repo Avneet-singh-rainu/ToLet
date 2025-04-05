@@ -1,11 +1,96 @@
-# Ignore Visual Studio temporary files
-.vs/
+########################
+# .NET / ASP.NET Core
+########################
+
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
 *.user
 *.suo
-*.vspx
-*.vsidx
+*.userosscache
+*.sln.docstates
+
+# Rider / VS Code / VS IDEs
+.idea/
+.vscode/
+.vs/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# dotnet watch
+**/Properties/launchSettings.json
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+project.lock.json
+project.fragment.lock.json
+
+# Logs
+*.log
+logs/
+
+# Others
 *.dbmdl
 *.bak
 *.pdb
-bin/
-obj/
+*.tmp
+*.cache
+*.zip
+
+########################
+# Node / React / JavaScript
+########################
+
+# Node modules
+node_modules/
+
+# Build
+/build
+/dist
+/.next
+/.turbo
+/.parcel-cache
+.nyc_output/
+
+# Environment files
+.env
+.env.*
+.env.local
+
+# npm/yarn lockfiles (optional to ignore one)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# IDE
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
+coverage-final.json
+.nyc_output/
+
+########################
+# OS-specific
+########################
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
