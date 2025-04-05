@@ -1,87 +1,11 @@
-########################
-# Global for .NET Projects
-########################
-
-# Build Results
-**/bin/
-**/obj/
-**/out/
-
-# User-specific Files
+# Ignore Visual Studio temporary files
+.vs/
 *.user
 *.suo
-*.userosscache
-*.sln.docstates
-
-# IDE Configs (Rider / VS / VSCode)
-.idea/
-.vscode/
-**/.vs/
-
-# ASP.NET Scaffolding
-**/ScaffoldingReadMe.txt
-
-# dotnet watch / launch settings
-**/Properties/launchSettings.json
-
-# NuGet Packages & Artifacts
-*.nupkg
-*.snupkg
-**/packages/
-.nuget/
-project.lock.json
-project.fragment.lock.json
-
-# Logs
-*.log
-**/logs/
-
-# Misc
+*.vspx
+*.vsidx
 *.dbmdl
 *.bak
 *.pdb
-*.tmp
-*.cache
-*.zip
-
-########################
-# Node / React / JS (for ToLet.Client)
-########################
-
-# Node Modules & Build
-**/node_modules/
-**/build/
-**/dist/
-**/.next/
-**/.turbo/
-**/.parcel-cache/
-.nyc_output/
-
-# Env Files
-.env
-.env.*
-.env.local
-
-# Lockfiles (optional)
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# Test Coverage
-coverage/
-coverage-final.json
-
-########################
-# OS-Specific
-########################
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Linux
-*~
+bin/
+obj/

@@ -1,7 +1,9 @@
+import React from "react";
 import { Routes, Route } from "react-router";
 import Home from "./pages/Home";
 import NavLayout from "./layouts/NavLayout";
 import NoNavLayout from "./layouts/NoNavLayout";
+import RoomDetailsPage from './pages/RoomDetailsPage'
 
 function App() {
    return (
@@ -9,6 +11,7 @@ function App() {
          <Routes>
             <Route element={<NoNavLayout />}>
                <Route index element={<Home />} />
+               <Route path="/room-details/:id" element={<RoomDetailsPage />} />
             </Route>
 
             <Route element={<NavLayout />}></Route>
@@ -18,3 +21,4 @@ function App() {
 }
 
 export default App;
+
