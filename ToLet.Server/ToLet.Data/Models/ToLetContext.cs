@@ -21,13 +21,13 @@ public partial class ToLetContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=ASUS-A17\\SQLEXPRESS02;Database=ToLet;Trusted_Connection=True;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Server=LAPTOP-S6I83F7D;Database=ToLet;Trusted_Connection=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Room>(entity =>
         {
-            entity.HasKey(e => e.RoomId).HasName("PK__room__19675A8ABAB79529");
+            entity.HasKey(e => e.RoomId).HasName("PK__room__19675A8A227A0E33");
 
             entity.ToTable("room");
 
@@ -60,12 +60,12 @@ public partial class ToLetContext : DbContext
 
             entity.HasOne(d => d.RoomOwnerNavigation).WithMany(p => p.Rooms)
                 .HasForeignKey(d => d.RoomOwner)
-                .HasConstraintName("FK__room__room_owner__4CA06362");
+                .HasConstraintName("FK_Room_User");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__user__B9BE370FEA5B74DC");
+            entity.HasKey(e => e.UserId).HasName("PK__user__B9BE370F45CC6E01");
 
             entity.ToTable("user");
 
