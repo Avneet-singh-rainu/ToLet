@@ -1,7 +1,8 @@
 // NavLayout.jsx
 import React from "react";
 import { Outlet } from "react-router";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/HomePage/Navbar";
+import Footer from "../components/Footer";
 
 const NavLayout = () => {
    return (
@@ -12,6 +13,9 @@ const NavLayout = () => {
          <main>
             <Outlet />
          </main>
+         <footer>
+            <Footer />
+         </footer>
       </div>
    );
 };

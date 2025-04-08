@@ -1,11 +1,20 @@
 import React from "react";
-import { Menu } from "lucide-react";
+import { Menu, ArrowLeft } from "lucide-react";
 import OpenNavBar from "./OpenNavBar";
+import { useNavigate, useParams } from "react-router";
 
 const Navbar = () => {
    const [isOpen, setIsOpen] = React.useState(false);
+   const params = window.location.pathname.split("/").slice(1);
+   console.log("🚀 ~ Navbar ~ params:", params);
+
+   const isSearchPage = params[0] === "search";
    const toggleMenu = () => {
       setIsOpen(!isOpen);
+   };
+   const navigate = useNavigate();
+   const handleSearchClick = () => {
+      navigate("/search");
    };
 
    // Close the menu when clicking outside of it
@@ -34,17 +43,36 @@ const Navbar = () => {
 
    return (
       // Nav-Container
-      <div className="nav-root px-3 absolute top-5 left-1/2 transform -translate-x-1/2 w-full z-[999] max-h-14">
+      <div className="nav-root px-3 absolute top-5 left-1/2 transform -translate-x-1/2 w-full z-[999] max-h-14 overflow-hidden">
          {/* items container */}
          <div className="flex justify-between bg-white rounded-full items-center text-black  px-4 py-1">
             {/* icon logo */}
-            <div className="cursor-pointer font-semibold">ToLet</div>
+            {isSearchPage ? (
+               <div
+                  className="cursor-pointer font-semibold"
+                  onClick={() => navigate("/")}
+               >
+                  <ArrowLeft />
+               </div>
+            ) : (
+               <div
+                  className="cursor-pointer text-xl text-blue-600 font-bold"
+                  onClick={() => navigate("/search")}
+               >
+                  <img
+                     src="2let.jpg"
+                     alt=""
+                     className="object-cover h-[40px] transform scale-150 rounded-full"
+                  />
+               </div>
+            )}
 
             {/* search box */}
             <div className="">
                <input
                   type="text"
-                  className="px-5 py-2 outline-none bg-transparent ransition duration-300"
+                  onClick={handleSearchClick}
+                  className="px-5 py-2 outline-none bg-gray-100 rounded-full ransition duration-300 "
                   placeholder="Search for locations..."
                />
             </div>
