@@ -17,6 +17,7 @@ import GalleryPhotos from "../components/GalleryPhotos";
 import ImageSlider from "../components/ImageSlider";
 import Back from "../components/Back";
 import CustomTileLayer from "../components/HomePage/CustomTileLayer";
+import Review from "../components/RoomDetails/Review";
 
 // Auto-fit both markers in view
 const AutoFitBounds = ({ positionA, positionB }) => {
@@ -105,10 +106,10 @@ const RoomDetailsPage = ({
     });
 
     return (
-        <div className="overflow-x-hidden min-h-screen relative pb-24 bg-gray-50">
+        <div className="overflow-x-hidden min-h-screen relative pb-4 bg-gray-50">
             <div className="relative">
-                <Back className="absolute top-4 left-4 z-10" />
-                <ImageSlider className="h-56 md:h-72 w-full object-cover" />
+                <Back />
+                <ImageSlider />
 
                 <div className="absolute bottom-4 right-4 flex space-x-2">
                     <button
@@ -257,7 +258,9 @@ const RoomDetailsPage = ({
                     </div>
                 </div>
             </div>
-
+            <div>
+                <Review />
+            </div>
             {/* Bottom bar */}
             <div className="fixed bottom-0 left-0 w-full py-3 px-4 sm:px-6 bg-white border-t border-gray-100">
                 <div className="flex justify-between items-center">
