@@ -7,6 +7,7 @@ import NoNavLayout from "./layouts/NoNavLayout";
 import RoomDetailsPage from "./pages/RoomDetailsPage";
 import SearchPage from "./pages/SearchPage";
 import Error from "./pages/Error";
+import CreateRoom from "./pages/CreateRoom";
 import Gallery from "./components/RoomDetails/Gallery";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                <Route path="room-details/gallery" element={<Gallery />} />
                <Route path="room-details/reviews" element={<AllReviews />} />
                <Route path="/search" element={<SearchPage />} />
+               <Route path="/createroom" element={<CreateRoom />} />
                <Route
                   path="/*"
                   element={<Error message={"Page Under Progress..."} />}
