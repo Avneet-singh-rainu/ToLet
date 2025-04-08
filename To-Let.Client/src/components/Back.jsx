@@ -15,5 +15,4 @@ const Back = () => {
         </div>
     )
 }
-
 export default Back
