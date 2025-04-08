@@ -9,14 +9,14 @@ const images = [
 const GalleryPhotos = () => {
     return (
         <div>
-            <div className='flex justify-between'>
+            <div className='flex justify-between  pb-4'>
                 <p className=' font-semibold text-xl'>Gallery Photos</p>
                 <p className='text-green-500 font-semibold text-lg'>See All</p>
             </div>
-            <div className='flex rounded-3xl mt-4 gap-3 overflow-x-scroll w-full'>
+            <div className='flex  mt-4 gap-3 overflow-x-scroll w-full'>
                 {
                     images.map((img) => (
-                        <img className='rounded-4xl w-48' src={img} alt='Image' />
+                        <img className='rounded-xl w-48' src={img} alt='Image' />
                     ))
                 }
             </div>

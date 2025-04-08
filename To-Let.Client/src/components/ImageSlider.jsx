@@ -25,7 +25,7 @@ const ImageSlider = () => {
                     className="w-full h-72 object-cover transition duration-500 ease-in-out"
                 />
             </div>
-            <div className="flex justify-center absolute bottom-3 left-[50%] transform -translate-[50%] space-x-2">
+            <div className="flex justify-center absolute bottom-3 left-[50%] transform -translate-[50%] gap-2">
                 {images.map((_, index) => (
                     <span
                         key={index}
