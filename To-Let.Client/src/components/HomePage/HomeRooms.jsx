@@ -1,6 +1,9 @@
 import React from "react";
+import RoomCard from "./RoomCard";
 
-const RoomCard = () => {
+const HomeRooms = () => {
+   // mimicking data from the backend
+   // fetch this data from an API or a database.
    const data = [
       {
          id: 1,
@@ -12,6 +15,7 @@ const RoomCard = () => {
          address: "123 Maple Street, Delhi",
          isSharing: false,
          furnished: "furnished",
+         rating: 4.8,
       },
       {
          id: 2,
@@ -22,6 +26,7 @@ const RoomCard = () => {
          address: "45 Tech Park Road, Bengaluru",
          isSharing: true,
          furnished: "semi furnished",
+         rating: 4.2,
       },
       {
          id: 3,
@@ -32,6 +37,7 @@ const RoomCard = () => {
          address: "78 Greenfield, Mumbai",
          isSharing: false,
          furnished: "furnished",
+         rating: 4.9,
       },
       {
          id: 4,
@@ -42,29 +48,23 @@ const RoomCard = () => {
          address: "Near LPU Campus, Phagwara",
          isSharing: true,
          furnished: "non furnished",
+         rating: 4.0,
       },
    ];
 
    return (
-      <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-         {data.map((room) => (
-            <div
-               key={room.id}
-               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
-            >
-               <img
-                  src={room.image}
-                  alt={room.name}
-                  className="w-full h-40 object-cover"
-               />
-               <div className="p-4">
-                  <h2 className="text-lg font-semibold mb-1">{room.name}</h2>
-                  <p className="text-gray-600 text-sm">{room.description}</p>
-               </div>
-            </div>
-         ))}
+      <div className="home-rooms-container pt-[2vh] px-4">
+         <div className="flex justify-between items-center mb-4">
+            <h2 className="text-xl font-bold text-gray-800">Available Rooms</h2>
+            <button className="text-blue-600 font-medium text-sm">
+               View All
+            </button>
+         </div>
+
+         {/* based on selected filter i would send the data to the room card */}
+         <RoomCard data={data} />
       </div>
    );
 };
 
-export default RoomCard;
+export default HomeRooms;

@@ -5,22 +5,22 @@ import ImageSlider from '../components/ImageSlider';
 import Back from '../components/Back';
 
 const details = [
-    {
-        name: 'Hotels',
-        logo: <Hotel color='green' />
-    },
-    {
-        name: '4 Bedrooms',
-        logo: <Bed color='green' />
-    },
-    {
-        name: '2 Bathrooms',
-        logo: <Bath color='green' />
-    },
-    {
-        name: '4000 sqft',
-        logo: <LandPlot color='green' />
-    }
+   {
+      name: "Hotels",
+      logo: <Hotel color="green" />,
+   },
+   {
+      name: "4 Bedrooms",
+      logo: <Bed color="green" />,
+   },
+   {
+      name: "2 Bathrooms",
+      logo: <Bath color="green" />,
+   },
+   {
+      name: "4000 sqft",
+      logo: <LandPlot color="green" />,
+   },
 ];
 
 const RoomDetailsPage = ({ roomName = "Royale President Hotel", address = "79 Place de la Madeleine, Paris 75009, France" }) => {
