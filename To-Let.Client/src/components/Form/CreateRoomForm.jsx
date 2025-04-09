@@ -154,107 +154,6 @@ function FeaturesTab({ formData, handleChange }) {
   );
 }
 
-/** Media Tab */
-function MediaTab({ images, videos, errors, handleImageUpload, handleVideoUpload, removeImage, removeVideo }) {
-  return (
-    <div className="space-y-6">
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          Room Images <span className="text-red-500">*</span>
-        </label>
-        <div className="border-2 border-dashed rounded-lg p-6 text-center">
-          <input
-            type="file"
-            multiple
-            accept="image/*"
-            onChange={handleImageUpload}
-            className="hidden"
-            id="image-upload"
-          />
-          <label htmlFor="image-upload" className="cursor-pointer">
-            <div className="mx-auto w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3">
-              <Image size={24} className="text-blue-600" />
-            </div>
-            <p className="text-sm font-medium text-blue-600">Click to upload images</p>
-            <p className="text-xs text-gray-500 mt-1">PNG, JPG, WEBP up to 10MB</p>
-          </label>
-        </div>
-        {errors.images && <p className="mt-1 text-sm text-red-600">{errors.images}</p>}
-        {images.length > 0 && (
-          <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            {images.map((image, index) => (
-              <div key={index} className="relative group">
-                <img
-                  src="/api/placeholder/300/300"
-                  alt={`Preview ${index}`}
-                  className="w-full aspect-square object-cover rounded-lg border"
-                />
-                <button
-                  onClick={() => removeImage(index)}
-                  className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1 opacity-0 group-hover:opacity-100"
-                >
-                  <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-                <p className="text-xs text-center mt-1 truncate">{image.name}</p>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">Room Videos (Optional)</label>
-        <div className="border-2 border-dashed rounded-lg p-6 text-center">
-          <input
-            type="file"
-            multiple
-            accept="video/*"
-            onChange={handleVideoUpload}
-            className="hidden"
-            id="video-upload"
-          />
-          <label htmlFor="video-upload" className="cursor-pointer">
-            <div className="mx-auto w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-3">
-              <Video size={24} className="text-purple-600" />
-            </div>
-            <p className="text-sm font-medium text-purple-600">Click to upload videos</p>
-            <p className="text-xs text-gray-500 mt-1">MP4, WebM up to 100MB</p>
-          </label>
-        </div>
-        {videos.length > 0 && (
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {videos.map((video, index) => (
-              <div key={index} className="flex items-center p-3 border rounded-lg bg-gray-50">
-                <Video size={24} className="text-purple-600" />
-                <div className="ml-3 flex-grow truncate">
-                  <p className="text-sm font-medium">{video.name}</p>
-                  <p className="text-xs text-gray-500">{(video.size / (1024 * 1024)).toFixed(2)} MB</p>
-                </div>
-                <button
-                  onClick={() => removeVideo(index)}
-                  className="ml-2 text-gray-500 hover:text-red-500"
-                >
-                  <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
 /** Availability Tab */
 function AvailabilityTab({ formData, handleChange }) {
   return (
@@ -284,6 +183,72 @@ function AvailabilityTab({ formData, handleChange }) {
     </div>
   );
 }
+/** Media Tab */
+function MediaTab({ images, videos, errors, handleImageUpload, handleVideoUpload, removeImage, removeVideo }) {
+  return (
+    <div className="space-y-6">
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Room Images <span className="text-red-500">*</span>
+        </label>
+        <div className="border-2 border-dashed rounded-lg p-6 text-center">
+          <input type="file" multiple accept="image/*" onChange={handleImageUpload} className="hidden" id="image-upload" />
+          <label htmlFor="image-upload" className="cursor-pointer">
+            <div className="mx-auto w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+              <Image size={24} className="text-blue-600" />
+            </div>
+            <p className="text-sm font-medium text-blue-600">Click to upload images</p>
+            <p className="text-xs text-gray-500 mt-1">PNG, JPG, WEBP up to 10MB</p>
+          </label>
+        </div>
+        {errors.images && <p className="mt-1 text-sm text-red-600">{errors.images}</p>}
+        {images.length > 0 && (
+          <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {images.map((image, index) => (
+              <div key={index} className="relative group">
+                <img src="/api/placeholder/300/300" alt={`Preview ${index}`} className="w-full aspect-square object-cover rounded-lg border" />
+                <button onClick={() => removeImage(index)} className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1 opacity-0 group-hover:opacity-100">
+                  <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
+                </button>
+                <p className="text-xs text-center mt-1 truncate">{image.name}</p>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">Room Videos (Optional)</label>
+        <div className="border-2 border-dashed rounded-lg p-6 text-center">
+          <input type="file" multiple accept="video/*" onChange={handleVideoUpload} className="hidden" id="video-upload" />
+          <label htmlFor="video-upload" className="cursor-pointer">
+            <div className="mx-auto w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-3">
+              <Video size={24} className="text-purple-600" />
+            </div>
+            <p className="text-sm font-medium text-purple-600">Click to upload videos</p>
+            <p className="text-xs text-gray-500 mt-1">MP4, WebM up to 100MB</p>
+          </label>
+        </div>
+        {videos.length > 0 && (
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {videos.map((video, index) => (
+              <div key={index} className="flex items-center p-3 border rounded-lg bg-gray-50">
+                <Video size={24} className="text-purple-600" />
+                <div className="ml-3 flex-grow truncate">
+                  <p className="text-sm font-medium">{video.name}</p>
+                  <p className="text-xs text-gray-500">{(video.size / (1024 * 1024)).toFixed(2)} MB</p>
+                </div>
+                <button onClick={() => removeVideo(index)} className="ml-2 text-gray-500 hover:text-red-500">
+                  <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 
 // Main Component
 export default function CreateRoomForm() {
@@ -389,9 +354,31 @@ export default function CreateRoomForm() {
     { id: 'location', label: 'Location', icon: <MapPin size={20} /> },
     { id: 'details', label: 'Details', icon: <Info size={20} /> },
     { id: 'features', label: 'Features', icon: <Home size={20} /> },
-    { id: 'media', label: 'Media', icon: <Image size={20} /> },
     { id: 'availability', label: 'Availability', icon: <Calendar size={20} /> },
+    { id: 'media', label: 'Media', icon: <Image size={20} /> },
   ];
+
+  const tabFields = {
+    location: ['room_address', 'room_longitude', 'room_latitude'],
+    details: ['room_price'],
+    features: [],
+    availability: [],
+    media: ['images'],
+  };
+
+  const handleNext = () => {
+    const allErrors = validateForm();
+    setErrors(allErrors);
+
+    const hasCurrentTabErrors = tabFields[activeTab].some((field) => allErrors[field]);
+
+    if (!hasCurrentTabErrors) {
+      const currentIndex = tabs.findIndex((t) => t.id === activeTab);
+      if (currentIndex < tabs.length - 1) {
+        setActiveTab(tabs[currentIndex + 1].id);
+      }
+    }
+  };
 
   if (isSubmitted) {
     return (
@@ -436,6 +423,9 @@ export default function CreateRoomForm() {
           {activeTab === 'features' && (
             <FeaturesTab formData={formData} handleChange={handleChange} />
           )}
+          {activeTab === 'availability' && (
+            <AvailabilityTab formData={formData} handleChange={handleChange} />
+          )}
           {activeTab === 'media' && (
             <MediaTab
               images={images}
@@ -447,13 +437,11 @@ export default function CreateRoomForm() {
               removeVideo={removeVideo}
             />
           )}
-          {activeTab === 'availability' && (
-            <AvailabilityTab formData={formData} handleChange={handleChange} />
-          )}
+       
           <div className="flex justify-between mt-10">
             <button
               type="button"
-              onClick={() => setActiveTab(tabs[Math.max(tabs.findIndex(t => t.id === activeTab) - 1, 0)].id)}
+              onClick={() => setActiveTab(tabs[Math.max(tabs.findIndex((t) => t.id === activeTab) - 1, 0)].id)}
               className={`px-5 py-2 bg-gray-100 rounded-lg ${activeTab === tabs[0].id ? 'invisible' : 'hover:bg-gray-200'}`}
             >
               Previous
@@ -465,7 +453,7 @@ export default function CreateRoomForm() {
             ) : (
               <button
                 type="button"
-                onClick={() => setActiveTab(tabs[Math.min(tabs.findIndex(t => t.id === activeTab) + 1, tabs.length - 1)].id)}
+                onClick={handleNext}
                 className="px-5 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200"
               >
                 Next
